@@ -1,0 +1,28 @@
+//Default is structured just like the other switch cases so you might want to review your answer for that.
+//i.e. it does not return, but it should assign answer= something and then break.
+
+function switchOfStuff(val) {
+  var answer = "";
+  // Only change code below this line
+  switch (val){
+    case "a":
+      answer = "apple";
+      break;
+    case "b":
+      answer = "bird";
+      break;
+    case "c":
+      answer = "cat";
+      break;
+    default:
+    case "4"://可以没有
+//default:
+  //answer ="stuff";
+      answer ="stuff";
+  } 
+  // Only change code above this line  
+  return answer;  
+}
+
+// Change this value to test
+switchOfStuff(1);

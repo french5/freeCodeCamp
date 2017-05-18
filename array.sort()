@@ -1,0 +1,27 @@
+Your post inspired me to play around this a little. What I think is happening is that callback, the compare function, is passed each pair of numbers until it iterates through the entire array. So starting with function(1,12), the result would be -11, which would shift the 1 to the next position in the array. Next up it would call function(1,21) and shift it. Anytime the callback returns a negative number, it shifts A further down the array.
+
+var array = [1, 12, 21, 2];
+
+// Only change code below this line.
+
+array.sort(function(a,b){
+  return b - a;
+});
+
+//First Iteration:
+[12, 1, 21, 2];
+
+//Second Iteration:
+[12,21,1,2]
+
+//Third Iteration:
+[12,21,2,1]
+
+//Fourth Iteration:
+[21,12,2,1]
+So if you wanted to sort the array ascending, you would edit your compare function as follows:
+
+array.sort(function(a,b){
+  return a - b;
+});
+Again, this is me just speculating. I tried to look up the documentation and there isn't a lot.

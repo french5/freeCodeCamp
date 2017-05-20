@@ -1,0 +1,39 @@
+//global objects
+
+// Setup
+var outerWear = "T-Shirt";
+
+function myOutfit() {
+  // Only change code below this line
+  
+  var outerWear="sweater";
+  
+  // Only change code above this line
+  return outerWear;
+}
+
+myOutfit();
+//split
+var string = "Split me into an array";
+var array = [];
+
+// Only change code below this line.
+
+array = string.split(' ');
+
+//reverse
+var array = [1,2,3,4,5,6,7];
+var newArray = [];
+
+// Only change code below this line.
+
+newArray = array.reverse();
+  
+//join
+var joinMe = ["Split","me","into","an","array"];
+var joinedString = '';
+
+// Only change code below this line.
+
+joinedString = joinMe.join(' ');  
+

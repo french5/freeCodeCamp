@@ -1,0 +1,59 @@
+function replacer(match, p1, p2, p3, offset, string) {
+  // p1 is nondigits, p2 digits, and p3 non-alphanumerics
+  return [p1, p2, p3].join(' - ');
+}
+var newString = 'abc12345#$*%'.replace(/([^\d]*)(\d*)([^\w]*)/, replacer);
+console.log(newString);  // abc - 12345 - #$*%
+
+var str = 'Twas the night before Xmas...';
+var newstr = str.replace(/xmas/i, 'Christmas');
+console.log(newstr);  // Twas the night before Christmas...
+
+var re = /apples/gi;
+var str = 'Apples are round, and apples are juicy.';
+var newstr = str.replace(re, 'oranges');
+console.log(newstr);  // oranges are round, and oranges are juicy.
+
+var re = /(\w+)\s(\w+)/;
+var str = 'John Smith';
+var newstr = str.replace(re, '$2, $1');
+console.log(newstr);  // Smith, John
+
+function styleHyphenFormat(propertyName) {
+  function upperToHyphenLower(match, offset, string) {
+    return (offset ? '-' : '') + match.toLowerCase();
+  }
+  return propertyName.replace(/[A-Z]/g, upperToHyphenLower);
+}
+
+var newString = propertyName.replace(/[A-Z]/g, '-' + '$&'.toLowerCase()); 
+
+function f2c(x) {
+  function convert(str, p1, offset, s) {
+    return ((p1 - 32) * 5/9) + 'C';
+  }
+  var s = String(x);
+  var test = /(-?\d+(?:\.\d*)?)F\b/g;
+  return s.replace(test, convert);
+}
+
+x-x_
+x---x---x---x---
+x-xxx-xx-x-
+x_x_x___x___x___  
+
+[
+  { on: true, length: 1 },
+  { on: false, length: 1 },
+  { on: true, length: 2 }
+  ...
+]
+
+var str = 'x-x_';
+var retArr = [];
+str.replace(/(x_*)|(-)/g, function(match, p1, p2) {
+  if (p1) { retArr.push({ on: true, length: p1.length }); }
+  if (p2) { retArr.push({ on: false, length: 1 }); }
+});
+
+console.log(retArr);

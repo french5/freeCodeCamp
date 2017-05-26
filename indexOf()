@@ -1,0 +1,16 @@
+Use Case: Check to see if there are any apples in the fruit basket (defined as an array)?
+
+var basket = ['apple','orange','banana','strawberry'];
+Without indexOf()
+
+var found = false;
+for(var i= 0, l = basket.length; i< l; i++){
+    if(basket[i] === 'apple'){
+        found = true;
+                break;
+    }
+}
+console.log(found);
+With indexOf()
+
+console.log(basket.indexOf("apple") != -1);

@@ -1,6 +1,8 @@
-You can start a comment with <!-- and end a comment with -->
+Uncomment HTML
 
-Uncomment your h1, h2 and paragraph
+//You can start a comment with <!-- and end a comment with -->
+
+//Uncomment your h1, h2 and paragraph
 
 <!--
 <h1>Hello World</h1>
@@ -9,3 +11,206 @@ Uncomment your h1, h2 and paragraph
 
 <p>Hello Paragraph</p>
 -->
+
+Change the Color of Text 
+
+//Your h2 element should be red.
+
+<h2 style="color: red">CatPhotoApp</h2>
+
+<p>Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase the red dot, hairball run catnip eat the grass sniff.</p>
+
+Use CSS Selectors to Style Elements
+//
+<style>
+  h2 {color: blue;}
+</style>
+<h2 >CatPhotoApp</h2>
+
+<p>Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase the red dot, hairball run catnip eat the grass sniff.</p>
+
+Use a CSS Class to Style an Element
+//Classes are reusable styles that can be added to HTML elements.tips:1sylte element should has period before XXX-text(xxx is color);2 h2 element should 
+//has class property and no period before XXX-text
+//two ways to add color in html and css
+
+<style>
+  h2 {
+    color: red;
+  }
+   .red-text {
+    color:red;
+  }
+</style>
+
+<h2 class="red-text">CatPhotoApp</h2>
+
+<p class="red-text">Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase the red dot, hairball run catnip eat the grass sniff.</p>
+
+
+Change the Font Size of an Element 
+//Font size is controlled by the font-size CSS property, like this:
+//h1 {
+//  font-size: 30px;
+//}
+
+
+<style>
+  .red-text {
+    color: red;
+  }
+  p {
+  font-size: 16px;
+  font-family: Sans-serif(Monospace);
+  }
+</style>
+
+<h2 class="red-text">CatPhotoApp</h2>
+
+<p class="red-text">Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase the red dot, hairball run catnip eat the grass sniff.</p>
+<p>Purr jump eat the grass rip the couch scratched sunbathe, shed everywhere rip the couch sleep in the sink fluffy fur catnip scratched.</p>
+
+Import a Google Font
+//@import appear 
+@import <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+<style>
+  .red-text {
+    color: red;
+  }
+  h2{
+     font-family: Lobster;
+  }
+  p {
+    font-size: 16px;
+    font-family: Monospace;
+  }
+    .smaller-image{
+    width: 100px;
+  }
+    .thin-red-border {
+    border-color: red;
+    border-width: 5px;
+    border-style: solid;
+    border-radius:10px;
+    border-radius: 50%;
+  }//Add Borders Around your Elements
+</style>
+<p>view more <a href="http://www.freecatphotoapp.com">cat photos</a></p>//dead href="#"
+<a href="#"><img src="https://bit.ly/fcc-relaxing-cat" alt="Author standing on a beach with two thumbs up. " class="smaller-image thin-red-border"></a>
+<p>Top 3 things cats hate:</p>
+<ol>
+  <li>cat nip</li>
+  <li>laser pointers</li>
+  <li>lasagna</li>
+</ol>
+<p>Things cats love:</p>
+<ul>
+  <li>cat nip</li>
+  <li>laser pointers</li>
+  <li>lasagna</li>
+</ul>
+<input type="text">
+<h2 class="red-text">CatPhotoApp</h2>
+
+<p class="red-text">Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase the red dot, hairball run catnip eat the grass sniff.</p>
+<p class="red-text">Purr jump eat the grass rip the couch scratched sunbathe, shed everywhere rip the couch sleep in the sink fluffy fur catnip scratched.</p>
+<ul>
+  <li>milk</li>
+  <li>cheese</li>
+  <li>pork</li>
+</ul>
+<input type="text">
+<input type="text" placeholder="this is placeholder text">
+<form action="/submit-cat-photo">
+  <input type="text" placeholder="cat photo URL">
+</form>
+<form action="/submit-cat-photo">
+  <input type="text" placeholder="cat photo URL" required>//use a "required"then it must submit sth and go through
+  <button type="submit">Submit</button>
+</form>
+<form action="/submit-cat-photo">
+  <input type="text" placeholder="cat photo URL" required >
+  <button type="submit">Submit</button>
+  <label><input type="radio" name="indoor-outdoor"> Indoor</label>
+  <label><input type="radio" name="indoor-outdoor"> Outdoor</label>
+</form>
+<form action="/submit-cat-photo">
+  <label><input type="checkbox" name="personality"> Hating</label>
+  <label><input type="checkbox" name="personality"> Loving</label>
+  <label><input type="checkbox" name="personality"> Annoying</label>
+  <label><input type="radio" name="indoor-outdoor"> Indoor</label>
+  <label><input type="radio" name="indoor-outdoor"> Outdoor</label>
+  <input type="text" placeholder="cat photo URL" required>
+  <button type="submit">Submit</button>
+</form>
+//You can set a checkbox or radio button to be checked by default using the checked attribute.
+<form action="/submit-cat-photo">
+  <label><input type="radio" name="indoor-outdoor" checked> Indoor</label>
+  <label><input type="radio" name="indoor-outdoor"> Outdoor</label>
+  <label><input type="checkbox" name="personality" checked> Loving</label>
+  <label><input type="checkbox" name="personality"> Lazy</label>
+  <label><input type="checkbox" name="personality"> Energetic</label>
+  <input type="text" placeholder="cat photo URL" required>
+  <button type="submit">Submit</button>
+</form>
+//Nest Many Elements within a Single Div Element
+<div>
+<p>Things cats love:</p>
+<ul>
+  <li>cat nip</li>
+  <li>laser pointers</li>
+  <li>lasagna</li>
+</ul>
+<p>Top 3 things cats hate:</p>
+<ol>
+  <li>flea treatment</li>
+  <li>thunder</li>
+  <li>other cats</li>
+</ol>
+<style>
+  .silver-background {
+  background-color: silver;
+}
+</style>
+<div class="silver-background">
+  <p>Things cats love:</p>
+  <ul>
+    <li>cat nip</li>
+    <li>laser pointers</li>
+    <li>lasagna</li>
+  </ul>
+  <p>Top 3 things cats hate:</p>
+  <ol>
+    <li>flea treatment</li>
+    <li>thunder</li>
+    <li>other cats</li>
+  </ol>
+</div>
+
+//In addition to classes, each HTML element can also have an id attribute.
+//There are several benefits to using id attributes, and you'll learn more about them once you start using jQuery.
+<form action="/submit-cat-photo" id="cat-photo-form">
+  <label><input type="radio" name="indoor-outdoor" checked> Indoor</label>
+  <label><input type="radio" name="indoor-outdoor"> Outdoor</label>
+  <label><input type="checkbox" name="personality" checked> Loving</label>
+  <label><input type="checkbox" name="personality"> Lazy</label>
+  <label><input type="checkbox" name="personality"> Energetic</label>
+  <input type="text" placeholder="cat photo URL" required>
+  <button type="submit">Submit</button>
+</form>
+
+//one example of #usage
+<style>
+#cat-photo-farm {
+  background-color: green;
+}
+</style>
+<form action="/submit-cat-photo" id="cat-photo-form">
+  <label><input type="radio" name="indoor-outdoor" checked> Indoor</label>
+  <label><input type="radio" name="indoor-outdoor"> Outdoor</label>
+  <label><input type="checkbox" name="personality" checked> Loving</label>
+  <label><input type="checkbox" name="personality"> Lazy</label>
+  <label><input type="checkbox" name="personality"> Energetic</label>
+  <input type="text" placeholder="cat photo URL" required>
+  <button type="submit">Submit</button>
+</form>

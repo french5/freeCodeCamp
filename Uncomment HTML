@@ -1,0 +1,11 @@
+You can start a comment with <!-- and end a comment with -->
+
+Uncomment your h1, h2 and paragraph
+
+<!--
+<h1>Hello World</h1>
+
+<h2>CatPhotoApp</h2>
+
+<p>Hello Paragraph</p>
+-->

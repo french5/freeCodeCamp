@@ -1,0 +1,32 @@
+//The Array.isArray() determines whether the passed value is an Array.
+
+Array.isArray([1, 2, 3]);  // true
+Array.isArray({foo: 123}); // false
+Array.isArray('foobar');   // false
+Array.isArray(undefined);  // false
+//Array.isArray(obj)
+//Parameters
+
+obj
+The object to be checked.
+//Return value
+
+true if the object is an Array; otherwise, false.
+
+// all following calls return true
+Array.isArray([]);
+Array.isArray([1]);
+Array.isArray(new Array());
+// Little known fact: Array.prototype itself is an array:
+Array.isArray(Array.prototype); 
+
+// all following calls return false
+Array.isArray();
+Array.isArray({});
+Array.isArray(null);
+Array.isArray(undefined);
+Array.isArray(17);
+Array.isArray('Array');
+Array.isArray(true);
+Array.isArray(false);
+Array.isArray({ __proto__: Array.prototype });

@@ -1,0 +1,42 @@
+//How reduce works
+
+Suppose the following use of reduce occurred:
+
+[0, 1, 2, 3, 4].reduce(
+  function (
+    accumulator,
+    currentValue,
+    currentIndex,
+    array
+  ) {
+    return accumulator + currentValue;
+  }
+);
+//Sum all the values of an array
+
+var sum = [0, 1, 2, 3].reduce(function (a, b) {
+  return a + b;
+}, 0);
+// sum is 6
+Alternatively, written with an arrow function:
+
+var total = [ 0, 1, 2, 3 ].reduce(
+  ( acc, cur ) => acc + cur,
+  0
+);
+
+//Flatten an array of arrays
+
+var flattened = [[0, 1], [2, 3], [4, 5]].reduce(
+  function(a, b) {
+    return a.concat(b);
+  },
+  []
+);
+// flattened is [0, 1, 2, 3, 4, 5]
+Alternatively, written with an arrow function:
+
+var flattened = [[0, 1], [2, 3], [4, 5]].reduce(
+  ( acc, cur ) => acc.concat(cur),
+  []
+);
